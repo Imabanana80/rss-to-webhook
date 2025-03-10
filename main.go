@@ -51,7 +51,7 @@ func sendFeeds() {
             log.Println(err)
         }
         if result.Title == last {
-            return
+            continue
         }
         feed.Last = result.Title
         config.Feeds[name] = feed
